@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Room | Game Station</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== HERO SECTION ===== -->
+  <header class="hero parallax-section">
+    <div class="hero-content fade-in">
+      <h1>Selamat Datang di <span>Game Station</span></h1>
+      <p>Rasakan sensasi bermain dengan kenyamanan terbaik.</p>
+      <button id="pesanBtn" class="btn-primary">Pesan Sekarang</button>
+    </div>
+  </header>
+
+  <!-- ===== BOOKING SECTION ===== -->
+  <section id="booking" class="booking parallax-section fade-in">
+    <div class="booking-wrapper">
+      <div class="booking-info">
+        <h2>Gallery</h2>
+        <img src="img/bg-features.jpg" alt="Gaming illustration" class="booking-image" />
+      </div>
+
+      <div class="booking-form">
+        <h3>Form Pemesanan</h3>
+        <p>Pilih tanggal, jam, durasi, dan jenis konsol untuk melihat ketersediaan room.</p>
+        <form id="bookingForm">
+          <label for="name">Atas Nama</label>
+          <input type="text" id="name" name="name" placeholder="Masukkan nama pemesan" required />
+
+          <label for="date">Hari / Tanggal</label>
+          <input type="date" id="date" name="date" required />
+
+          <label for="start">Jam Mulai</label>
+          <input type="time" id="start" name="start" required />
+
+          <label for="duration">Durasi Main</label>
+          <select id="duration" name="duration" required>
+            <option value="">Pilih Durasi</option>
+            <option value="1">1 Jam</option>
+            <option value="2">2 Jam</option>
+            <option value="3">3 Jam</option>
+            <option value="4">4 Jam</option>
+          </select>
+
+          <label for="console">Jenis Konsol</label>
+          <select id="console" name="console" required>
+            <option value="">Pilih Konsol</option>
+            <option value="PS4">PS4</option>
+            <option value="PS5">PS5</option>
+          </select>
+
+          <label for="room">Pilihan Room</label>
+          <select id="room" name="room" required>
+            <option value="">Pilih Room</option>
+          </select>
+
+          <div id="availability" class="availability"></div>
+
+          <button type="submit" id="submitBtn" disabled>Kirim Pemesanan</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer fade-in">
+    <p>© 2025 Game Station • Powered by <span>Playtime+</span></p>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="booking/data-booking.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
